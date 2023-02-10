@@ -35,7 +35,6 @@ export const Wrapper = styled.div`
     .score{
         font-size: 2rem;
         margin: 20px 0 0;
-
     }
 
     h1 {
@@ -52,12 +51,7 @@ export const Wrapper = styled.div`
         margin: 20px;
 
     }
-    @media (max-width:576px ) {
-        h1{
-            font-size: 36px;
-        }  
-    }
-
+    
     .start, .next{
         cursor: pointer;
         background: linear-gradient(180deg, rgb(63, 0, 113), rgb(21, 0, 80));
@@ -72,7 +66,7 @@ export const Wrapper = styled.div`
         font-size: 1.2rem;
     }
 
-    .start:hover, .next:hover{
+    .next:hover{
         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.35);
         transform: scale(1.05);
         transition: 0.3s ease;
@@ -108,6 +102,20 @@ export const Wrapper = styled.div`
           width: 25px;
         }
       }
+      @media (max-width:576px ) {
+        h1{
+            font-size: 36px;
+        }  
+        .score{
+            font-size: 1.3rem;
+            margin: 20px 0 0;
+        }
+        .next{
+            font-size: 0.9rem;
+            margin: 20px 0 10px;
+            padding: 0 20px;
+        }
+    }
 
 
 
