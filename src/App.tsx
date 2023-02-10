@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import QuestionCard from './components/QuestionCard';
 import { Difficulty, QuestionState, fetchQuizQuestions } from './API';
 import {GlobalStyle , Wrapper} from './App.styles';
@@ -68,6 +68,25 @@ function App() {
       setNumber(nextQuestion);
     }
   };
+  const [lodi, setLodi] = useState(true);
+
+  function fr() {
+    return new Promise<void>(gon => setTimeout(() => gon(), 2500));
+  }
+
+  useEffect(() => {
+    fr().then(() => {
+      const el = document.querySelector(".spinner-box");
+      if (el) {
+        el.remove();
+        setLodi(!lodi);
+      }
+    });
+  });
+
+  if (lodi) {
+    return null;
+  }
 
   return (
     <>
