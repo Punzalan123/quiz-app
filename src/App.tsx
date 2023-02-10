@@ -71,7 +71,7 @@ function App() {
   const [lodi, setLodi] = useState(true);
 
   function fr() {
-    return new Promise<void>(gon => setTimeout(() => gon(), 2500));
+    return new Promise<void>(gon => setTimeout(() => gon(), 2050));
   }
 
   useEffect(() => {
