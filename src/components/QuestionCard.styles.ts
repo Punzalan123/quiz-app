@@ -6,13 +6,26 @@ export const Wrapper = styled.div`
     width: 90%;
     background: linear-gradient(to bottom right, #301E67, #03001C);
     border-radius: 10px;
-    // border: 2px solid #0085a3;
-    padding: 20px;
+    padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     p{
         font-size: 1.2rem;
+    }
+    @media (max-width:576px ) {
+        width: 100%;
+        padding: 20px;
+        p{
+        font-size: 1rem;
+        }
+    }
+    .buttonParent {
+        display: flex;
+        flex-direction: column;
     }
 
 `
@@ -44,7 +57,14 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
         border-radius: 10px;
         color: #fff;
         text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
-
+        
+    }
+    @media (max-width:576px ) {
+        width: 95%;
+        align-self: center;
+        button{
+            font-size: 0.8rem;
+        }
     }
 
 `
