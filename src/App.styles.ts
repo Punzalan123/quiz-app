@@ -52,6 +52,11 @@ export const Wrapper = styled.div`
         margin: 20px;
 
     }
+    @media (max-width:576px ) {
+        h1{
+            font-size: 36px;
+        }  
+    }
 
     .start, .next{
         cursor: pointer;
